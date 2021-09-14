@@ -13,9 +13,9 @@ html {
 }
 
 body {
-  --app-width: 42rem;
+  --app-width: min(42rem, 100vw);
 
-  max-width: var(--app-width);
+  width: var(--app-width);
   margin: 0 auto;
 }
 
@@ -33,7 +33,14 @@ a {
 
 .install-button {
   position: absolute;
-  bottom: 26.8rem;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.install-button--top {
+  top: calc(194 * var(--app-width) / 375);
+}
+
+.install-button--bottom {
+  bottom: calc(268 * var(--app-width) / 375);
 }
